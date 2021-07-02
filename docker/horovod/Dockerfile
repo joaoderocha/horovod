@@ -23,28 +23,28 @@ ARG PYTHON_VERSION=3.7
 SHELL ["/bin/bash", "-cu"]
 
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
-        build-essential \
-        cmake \
-        g++-7 \
-        git \
-        curl \
-        vim \
-        wget \
-        ca-certificates \
-        libcudnn8=${CUDNN_VERSION} \
-        libnccl2=${NCCL_VERSION} \
-        libnccl-dev=${NCCL_VERSION} \
-        libjpeg-dev \
-        libpng-dev \
-        python${PYTHON_VERSION} \
-        python${PYTHON_VERSION}-dev \
-        python${PYTHON_VERSION}-distutils \
-        librdmacm1 \
-        libibverbs1 \
-        ibverbs-providers \
-        openjdk-8-jdk-headless \
-        openssh-client \
-        openssh-server \
+    build-essential \
+    cmake \
+    g++-7 \
+    git \
+    curl \
+    vim \
+    wget \
+    ca-certificates \
+    libcudnn8=${CUDNN_VERSION} \
+    libnccl2=${NCCL_VERSION} \
+    libnccl-dev=${NCCL_VERSION} \
+    libjpeg-dev \
+    libpng-dev \
+    python${PYTHON_VERSION} \
+    python${PYTHON_VERSION}-dev \
+    python${PYTHON_VERSION}-distutils \
+    librdmacm1 \
+    libibverbs1 \
+    ibverbs-providers \
+    openjdk-8-jdk-headless \
+    openssh-client \
+    openssh-server \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Open MPI
